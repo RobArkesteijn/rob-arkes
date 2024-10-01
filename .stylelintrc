@@ -1,5 +1,11 @@
 {
-  "extends": "stylelint-config-recommended-vue",
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recommended-vue"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "media-query-no-invalid": null
   }
