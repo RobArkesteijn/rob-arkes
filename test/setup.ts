@@ -1,7 +1,7 @@
 import { vi, beforeAll, afterEach } from 'vitest'
 
 beforeAll(() => {
-  vi.mock('gsap-trial', () => ({
+  vi.mock('gsap', () => ({
     gsap: {
       to: vi.fn(),
       from: vi.fn(),

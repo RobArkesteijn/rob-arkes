@@ -9,9 +9,12 @@ $desktop-xxl: 1800px;
 $content-width-small: 1120px;
 $content-width: 1440px;
 
+$header-height: 100px;
+
 // z-index
 $z-index: (
   negative: -1,
   zero: 0,
   positive: 1,
+  header: 10,
 );

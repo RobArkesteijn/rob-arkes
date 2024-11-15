@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { gsap } from 'gsap-trial'
+import { gsap } from 'gsap'
 import { pageFadeIn } from '#imports'
 
 describe('pageFadeIn', () => {

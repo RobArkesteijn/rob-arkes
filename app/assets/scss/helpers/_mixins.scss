@@ -5,7 +5,19 @@
 }
 
 @mixin respond-max($width) {
-  @media screen and (width <= calc($width - 1)) {
+  @media screen and (width <= $width - 1) {
     @content;
+  }
+}
+
+@mixin hover-style {
+  &:hover {
+    @content;
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
   }
 }

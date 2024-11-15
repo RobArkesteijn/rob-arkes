@@ -25,5 +25,4 @@ jobs:
         run: bun type-check
       - name: Build
         run: bun run build
-        env:
-          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+

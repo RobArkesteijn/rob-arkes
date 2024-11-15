@@ -5,48 +5,36 @@ body {
   height: 100%;
 }
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin and padding
-*/
 * {
   margin: 0;
   padding: 0;
 }
 
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
 body {
-  font-family: 'Merienda', sans-serif;
+  font-family: 'Aboreto', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   color: $ghost-white;
+  background-color: $night;
 
   &.locked {
     overflow: hidden;
   }
 }
 
-.layout {
-  background-color: $night;
+a {
+  text-decoration: none;
 }
 
-/*
-  5. Improve media defaults
-*/
 img,
 picture,
 video,
@@ -56,9 +44,6 @@ svg {
   max-width: 100%;
 }
 
-/*
-  6. Remove built-in form typography styles
-*/
 input,
 button,
 textarea,
@@ -66,9 +51,6 @@ select {
   font: inherit;
 }
 
-/*
-  7. Create a root stacking context
-*/
 #root,
 #__next {
   isolation: isolate;

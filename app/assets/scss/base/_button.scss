@@ -1,1 +1,27 @@
 @use '../helpers' as *;
+
+button,
+.button {
+  background-color: $night;
+  border: 1px solid $blaze-orange;
+  box-shadow: 0 0 10px 0 $night;
+  color: $ghost-white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  font-size: to-rem(14);
+
+  @include respond-min($desktop) {
+    font-size: to-rem(16);
+  }
+
+  @include hover-style {
+    background-color: $night;
+    box-shadow: 0 0 10px 0 $scarlet;
+  }
+
+  &--active {
+    background-color: $night;
+    box-shadow: 0 0 10px 0 $scarlet;
+  }
+}
