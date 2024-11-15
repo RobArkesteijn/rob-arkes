@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SpeedInsights } from '@vercel/speed-insights/nuxt'
+
 const container = ref<HTMLElement | null>(null)
 
 onMounted(() => {
@@ -7,21 +9,26 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    ref="container"
-    class="layout"
-  >
-    <div class="background">
-      <BackgroundSmoke />
-      <BackgroundParticles />
-    </div>
-    <AppHeader />
-    <main
-      id="smooth-wrapper"
-    >
-      <slot />
-    </main>
-  </div>
+  <Html>
+    <Body>
+      <SpeedInsights />
+      <div
+        ref="container"
+        class="layout"
+      >
+        <div class="background">
+          <BackgroundSmoke />
+          <BackgroundParticles />
+        </div>
+        <AppHeader />
+        <main
+          id="smooth-wrapper"
+        >
+          <slot />
+        </main>
+      </div>
+    </Body>
+  </Html>
 </template>
 
 <style scoped lang="scss">
