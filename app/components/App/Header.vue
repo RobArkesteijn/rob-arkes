@@ -29,7 +29,6 @@ onMounted(() => {
         format="webp"
         quality="20"
         alt="Website logo"
-        sizes="50px md:60px"
         class="app-header__logo"
       />
     </NuxtLink>
@@ -53,6 +52,11 @@ onMounted(() => {
 
   &__logo {
     transform-origin: center;
+    width: 50px;
+
+    @include respond-min($tablet) {
+      width: 60px;
+    }
   }
 
   &__logo-size-copy {
