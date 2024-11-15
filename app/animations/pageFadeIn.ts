@@ -1,4 +1,4 @@
-import { gsap } from 'gsap-trial'
+import { gsap } from 'gsap'
 
 const pageFadeIn = (element: HTMLElement | null) => {
   if (element) {
