@@ -1,16 +1,20 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-
-  components: [
-    {
-      path: '@/components',
-      pathPrefix: false,
+  app: {
+    head: {
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'theme-color', content: '#131112' },
+      ],
     },
-  ],
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
+  compatibilityDate: '2024-11-02',
 
   css: ['@/assets/scss/app.scss'],
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   eslint: {
     config: {
@@ -24,13 +28,13 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Merienda: [400, 700, 900],
+      Aboreto: [400],
     },
     display: 'swap',
   },
 
   imports: {
-    dirs: ['animations'],
+    dirs: ['animations', 'types'],
   },
 
   modules: [
@@ -40,6 +44,7 @@ export default defineNuxtConfig({
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-fonts',
     'nuxt-particles',
+    '@nuxt/icon',
   ],
 
   vite: {

@@ -1,8 +1,19 @@
+<script setup lang="ts">
+const container = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  pageFadeIn(container.value)
+})
+</script>
+
 <template>
-  <div class="layout">
+  <div
+    ref="container"
+    class="layout"
+  >
     <div class="background">
-      <SmokeBackground />
-      <FireParticlesBackground />
+      <BackgroundSmoke />
+      <BackgroundParticles />
     </div>
     <AppHeader />
     <main
@@ -16,6 +27,7 @@
 <style scoped lang="scss">
 .background {
   position: fixed;
+  z-index: map.get($z-index, 'negative');
   height: 100%;
   width: 100%;
 }
