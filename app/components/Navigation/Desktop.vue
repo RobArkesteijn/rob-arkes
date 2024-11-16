@@ -11,7 +11,7 @@ const route = useRoute()
 
 <template>
   <div class="navigation-desktop">
-    <NuxtLink
+    <SiteLink
       v-for="(item, index) in items"
       :key="`headerItem-${index}`"
       :to="item.link"
@@ -19,7 +19,7 @@ const route = useRoute()
       :class="{ 'button--active': route.path === item.link }"
     >
       {{ item.label }}
-    </NuxtLink>
+    </SiteLink>
   </div>
 </template>
 

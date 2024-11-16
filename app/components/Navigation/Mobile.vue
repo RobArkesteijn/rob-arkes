@@ -26,6 +26,9 @@ watch(() => route.path, () => {
   <div class="navigation-mobile">
     <button
       class="navigation-mobile__button"
+      :aria-label="navigationActive ? 'Close menu' : 'Open menu'"
+      :aria-expanded="navigationActive"
+      aria-controls="mobile-navigation-menu"
       @click="() => navigationActive = !navigationActive"
     >
       <Icon
@@ -38,10 +41,11 @@ watch(() => route.path, () => {
       />
     </button>
     <div
+      id="mobile-navigation-menu"
       ref="navigationElementWrapper"
       class="navigation-mobile__element-wrapper"
     >
-      <NuxtLink
+      <SiteLink
         v-for="(item, index) in items"
         :key="`headerItem-${index}`"
         :to="item.link"
@@ -51,7 +55,7 @@ watch(() => route.path, () => {
         <span class="navigation-mobile__element-text">
           {{ item.label }}
         </span>
-      </NuxtLink>
+      </SiteLink>
     </div>
   </div>
 </template>

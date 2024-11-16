@@ -45,7 +45,18 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-particles',
     '@nuxt/icon',
+    '@nuxtjs/seo',
   ],
+
+  ogImage: {
+    enabled: false,
+  },
+
+  site: {
+    url: 'rob-arkes.vercel.app',
+    name: 'RobArkes',
+    indexable: false,
+  },
 
   vite: {
     css: {

@@ -22,7 +22,7 @@ onMounted(() => {
 
 <template>
   <div class="app-header">
-    <NuxtLink to="/">
+    <SiteLink to="/">
       <NuxtImg
         ref="logoRef"
         src="/logo.png"
@@ -31,7 +31,7 @@ onMounted(() => {
         alt="Website logo"
         class="app-header__logo"
       />
-    </NuxtLink>
+    </SiteLink>
     <NavigationDesktop :items="headerItems" />
     <NavigationMobile :items="headerItems" />
     <div class="app-header__logo-size-copy" />

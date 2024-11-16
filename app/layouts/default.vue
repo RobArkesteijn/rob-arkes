@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Html>
+  <Html lang="en">
     <Body>
       <SpeedInsights />
       <div
