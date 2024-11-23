@@ -7,7 +7,10 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#131112' },
       ],
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
   },
 
   compatibilityDate: '2024-11-02',
@@ -34,7 +37,7 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ['animations', 'types'],
+    dirs: ['animations', 'data', 'types'],
   },
 
   modules: [

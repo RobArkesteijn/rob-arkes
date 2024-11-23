@@ -7,5 +7,7 @@ useSeoMeta({
 <template>
   <div
     class="index"
-  />
+  >
+    Homepage
+  </div>
 </template>

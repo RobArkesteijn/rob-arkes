@@ -1,11 +1,7 @@
 <script setup lang="ts">
-const logoRef = ref<ComponentPublicInstance | null>(null)
+import { navigationItems } from '@/data/Navigation'
 
-const headerItems: NavigationElement[] = [
-  { label: 'About', link: '/about' },
-  { label: 'Projects', link: '/projects' },
-  { label: 'Contact', link: '/contact' },
-]
+const logoRef = ref<ComponentPublicInstance | null>(null)
 
 const scrollRotate = () => {
   if (logoRef.value) {
@@ -32,8 +28,8 @@ onMounted(() => {
         class="app-header__logo"
       />
     </SiteLink>
-    <NavigationDesktop :items="headerItems" />
-    <NavigationMobile :items="headerItems" />
+    <NavigationDesktop :items="navigationItems" />
+    <NavigationMobile :items="navigationItems" />
     <div class="app-header__logo-size-copy" />
   </div>
 </template>

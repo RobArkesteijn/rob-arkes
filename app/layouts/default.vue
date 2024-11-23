@@ -26,6 +26,7 @@ onMounted(() => {
         >
           <slot />
         </main>
+        <PauseAnimationButton class="pause-animation-button" />
       </div>
     </Body>
   </Html>
@@ -37,5 +38,11 @@ onMounted(() => {
   z-index: map.get($z-index, 'negative');
   height: 100%;
   width: 100%;
+}
+
+.pause-animation-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 </style>
