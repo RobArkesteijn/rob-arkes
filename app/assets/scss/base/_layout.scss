@@ -29,6 +29,11 @@ body {
   &.locked {
     overflow: hidden;
   }
+
+  *:focus {
+    box-shadow: 0 0 10px 0 $scarlet;
+    outline: 1px solid $blaze-orange;
+  }
 }
 
 a {

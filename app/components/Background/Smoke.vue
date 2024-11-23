@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import * as THREE from 'three'
 
+const animationActive = useAnimationActive()
+
 let camera: THREE.PerspectiveCamera,
   scene: THREE.Scene,
   renderer: THREE.WebGLRenderer,
@@ -75,8 +77,11 @@ const init = () => {
 const animate = () => {
   delta = clock.getDelta()
   requestAnimationFrame(animate)
-  evolveSmoke()
-  render()
+
+  if (animationActive.value) {
+    evolveSmoke()
+    render()
+  }
 }
 
 const evolveSmoke = () => {

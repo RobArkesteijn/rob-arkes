@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import type { ISourceOptions as ParticlesOptions } from '@tsparticles/engine'
+import type { ISourceOptions as ParticlesOptions, Container } from '@tsparticles/engine'
+
+const particlesContainer = ref<Container | null>(null)
+
+const animationActive = useAnimationActive()
 
 const options: ParticlesOptions = {
   particles: {
@@ -65,6 +69,17 @@ const options: ParticlesOptions = {
   },
   detectRetina: true,
 }
+
+watch(animationActive, (active) => {
+  if (particlesContainer.value) {
+    if (active) {
+      particlesContainer.value.play()
+    }
+    else {
+      particlesContainer.value.pause()
+    }
+  }
+})
 </script>
 
 <template>
@@ -72,6 +87,7 @@ const options: ParticlesOptions = {
     <NuxtParticles
       id="tsparticles"
       :options="options"
+      @load="(container) => particlesContainer = container"
     />
   </div>
 </template>
