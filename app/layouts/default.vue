@@ -21,9 +21,7 @@ onMounted(() => {
           <BackgroundParticles />
         </div>
         <AppHeader />
-        <main
-          id="smooth-wrapper"
-        >
+        <main>
           <slot />
         </main>
         <PauseAnimationButton class="pause-animation-button" />
@@ -41,7 +39,7 @@ onMounted(() => {
 }
 
 .pause-animation-button {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }

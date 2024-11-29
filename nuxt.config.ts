@@ -55,6 +55,10 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
+  routeRules: {
+    '/**': { isr: true },
+  },
+
   site: {
     url: 'rob-arkes.vercel.app',
     name: 'RobArkes',

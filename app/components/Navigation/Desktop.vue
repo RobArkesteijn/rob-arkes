@@ -15,6 +15,8 @@ const backgroundLine = ref<string>('')
 const route = useRoute()
 
 const getNavigationBackgroundLine = (elements: ComponentPublicInstance[], container: HTMLElement) => {
+  if (!container || elements.length < 1) return
+
   const containerWidth = container.offsetWidth
   const containerWidthPseudo = container.offsetWidth * 1.5
   const blazeOrange = '#ff6600'
