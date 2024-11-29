@@ -16,10 +16,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.8.2",
+    "@nuxt/icon": "^1.9.0",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@nuxtjs/seo": "2.0.0-rc.23",
     "@types/three": "^0.170.0",
     "@vercel/speed-insights": "^1.1.0",
     "gsap": "^3.12.5",
@@ -31,20 +31,20 @@
   },
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.8",
-    "@nuxt/eslint": "^0.7.1",
+    "@nuxt/eslint": "^0.7.2",
     "@nuxt/test-utils": "^3.14.4",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.15.0",
-    "happy-dom": "^15.11.6",
+    "happy-dom": "^15.11.7",
     "husky": "^9.1.7",
     "nuxt-particles": "^0.3.0",
     "playwright-core": "^1.49.0",
-    "stylelint": "^16.10.0",
+    "stylelint": "^16.11.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-scss": "^6.10.0",
-    "vitest": "^2.1.5"
+    "vitest": "^2.1.6"
   },
   "engines": {
     "node": ">=20.0.0 <21.0.0"
