@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-11-02',
+  compatibilityDate: '2024-11-29',
 
   css: ['@/assets/scss/app.scss'],
 
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
   ],
 
   ogImage: {
-    enabled: false,
+    enabled: true,
   },
 
   routeRules: {

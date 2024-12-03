@@ -11,6 +11,7 @@ onMounted(() => {
 <template>
   <Html lang="en">
     <Body>
+      <OgImageScreenshot />
       <SpeedInsights />
       <div
         ref="container"
@@ -31,6 +32,10 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+main >:first-child {
+  padding-block: $header-height;
+}
+
 .background {
   position: fixed;
   z-index: map.get($z-index, 'negative');
