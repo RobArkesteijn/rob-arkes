@@ -15,8 +15,6 @@ const backgroundLine = ref<string>('')
 const route = useRoute()
 
 const getNavigationBackgroundLine = (elements: ComponentPublicInstance[], container: HTMLElement) => {
-  if (!container || elements.length < 1) return
-
   const containerWidth = container.offsetWidth
   const containerWidthPseudo = container.offsetWidth * 1.5
   const blazeOrange = '#ff6600'
@@ -73,7 +71,7 @@ onMounted(() => {
     class="navigation-desktop"
     :style="{ '--background-line': backgroundLine }"
   >
-    <SiteLink
+    <NuxtLink
       v-for="(item, index) in items"
       :key="`headerItem-${index}`"
       ref="navigationElements"
@@ -82,7 +80,7 @@ onMounted(() => {
       :class="{ 'button--active': route.path === item.link }"
     >
       {{ item.label }}
-    </SiteLink>
+    </NuxtLink>
   </div>
 </template>
 

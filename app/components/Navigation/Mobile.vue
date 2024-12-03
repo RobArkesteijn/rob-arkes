@@ -45,7 +45,7 @@ watch(() => route.path, () => {
       ref="navigationElementWrapper"
       class="navigation-mobile__element-wrapper"
     >
-      <SiteLink
+      <NuxtLink
         v-for="(item, index) in items"
         :key="`headerItem-${index}`"
         :to="item.link"
@@ -55,7 +55,7 @@ watch(() => route.path, () => {
         <span class="navigation-mobile__element-text">
           {{ item.label }}
         </span>
-      </SiteLink>
+      </NuxtLink>
     </div>
   </div>
 </template>

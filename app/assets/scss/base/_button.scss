@@ -8,7 +8,9 @@ button,
   color: $ghost-white;
   padding: 10px 20px;
   border-radius: 20px;
-  transition: background-color 0.2s, box-shadow 0.2s;
+  transition:
+    background-color $transition-time,
+    box-shadow $transition-time;
   font-size: to-rem(14);
   cursor: pointer;
 

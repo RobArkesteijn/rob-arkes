@@ -10,11 +10,11 @@ useSeoMeta({
     class="index"
   >
     <div class="index__container">
-      <div class="index__grid-section index__grid-section--col1">
-        <h1>The website of Rob Arkesteijn</h1>
-      </div>
-      <div class="index__grid-section index__grid-section--row1" />
-      <div class="index__grid-section index__grid-section--row2" />
+      <GridSection class="index__grid-section--col1">
+        <p>Test</p>
+      </GridSection>
+      <GridSection class="index__grid-section--row1" />
+      <GridSection class="index__grid-section--row2" />
     </div>
   </div>
 </template>
@@ -49,17 +49,6 @@ useSeoMeta({
   }
 
   &__grid-section {
-    border-radius: 20px;
-    border: 1px solid $primary;
-    box-shadow: 0 0 10px 0 $night;
-    background-color: rgba($night, 0.5);
-    padding: 20px;
-    transition: box-shadow 0.2s;
-
-    @include hover-style {
-      box-shadow: 0 0 10px 0 $scarlet;
-    }
-
     &--col1 {
       grid-area: col1;
       grid-row: span 9;
