@@ -36,8 +36,16 @@ export default defineNuxtConfig({
     display: 'swap',
   },
 
+  image: {
+    quality: 80,
+  },
+
   imports: {
     dirs: ['animations', 'data', 'types'],
+  },
+
+  linkChecker: {
+    enabled: false,
   },
 
   modules: [
@@ -49,6 +57,7 @@ export default defineNuxtConfig({
     'nuxt-particles',
     '@nuxt/icon',
     '@nuxtjs/seo',
+    '@nuxtjs/device',
   ],
 
   ogImage: {
@@ -57,6 +66,15 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { isr: true },
+  },
+
+  nitro: {
+    storage: {
+      recipes: {
+        driver: 'fs',
+        base: 'github-user',
+      },
+    },
   },
 
   site: {

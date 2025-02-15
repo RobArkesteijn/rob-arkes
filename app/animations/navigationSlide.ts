@@ -1,4 +1,4 @@
-import { gsap } from 'gsap'
+import { gsap } from 'gsap-trial'
 
 const navigationSlide = (element: HTMLElement | null, active: boolean) => {
   if (element) {

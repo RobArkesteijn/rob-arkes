@@ -25,4 +25,3 @@ jobs:
         run: bun type-check
       - name: Build
         run: bun run build
-

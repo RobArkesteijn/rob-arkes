@@ -17,13 +17,22 @@ body {
   padding: 0;
 }
 
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   font-family: 'Aboreto', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  color: $ghost-white;
+  color: $daintree-100;
   background-color: $night;
 
   &.locked {
@@ -31,13 +40,26 @@ body {
   }
 
   *:focus {
-    box-shadow: 0 0 10px 0 $scarlet;
-    outline: 1px solid $primary;
+    box-shadow: 0 0 10px 0 $daintree-600;
+    outline: 1px solid $daintree-600;
+  }
+
+  &:has(.main-navigation--active) {
+    overflow: hidden;
   }
 }
 
 a {
   text-decoration: none;
+}
+
+.content-wrapper {
+  max-width: $content-width;
+  padding-inline: 20px;
+
+  &--small {
+    max-width: $content-width-small;
+  }
 }
 
 img,

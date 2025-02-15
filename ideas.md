@@ -1,0 +1,5 @@
+- After closing the menu, reanimate the current section (re scroll in so to say)
+- Have darker background cosmic clouds per theme
+- Have different menu colors per theme
+- Have different particle colors per theme
+- Fix the mobile menu

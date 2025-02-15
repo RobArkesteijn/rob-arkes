@@ -1,13 +1,17 @@
-import { gsap } from 'gsap'
+import { gsap } from 'gsap-trial'
 
 const pageFadeIn = (element: HTMLElement | null) => {
   if (element) {
-    gsap.to(element,
+    const tl = gsap.timeline()
+    tl.from(element,
       {
+        opacity: 0,
+        duration: 2,
+      })
+      .to(element, {
         opacity: 1,
         duration: 2,
-      },
-    )
+      })
   }
 }
 

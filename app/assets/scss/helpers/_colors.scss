@@ -1,18 +1,96 @@
-// Neutral
-$white: #ffffff;
-$black: #000000;
+$black: black;
+$white: white;
 
 // Shades of gray
 $ghost-white: #F7F7FF;
 $dim-gray: #60656F;
 $night: #131112;
 
-// Fire colors
-$blaze-orange: #ff6600;
-$international-orange: #ff5500;
-$scarlet: #ff3300;
-$sunshade: #ffac33;
+// Default colors
+$daintree-50: #ecfeff;
+$daintree-100: #d0f9fd;
+$daintree-200: #a7f1fa;
+$daintree-300: #6ae5f6;
+$daintree-400: #26cfea;
+$daintree-500: #0ab2d0;
+$daintree-600: #0b8eaf;
+$daintree-700: #10728e;
+$daintree-800: #175c73;
+$daintree-900: #174d62;
+$daintree-950: #06212c;
+
+// Stardust
+$stardust-50: #f8f6f4;
+$stardust-100: #efebe5;
+$stardust-200: #ddd6cb;
+$stardust-300: #bfaf9c;
+$stardust-400: #b19a86;
+$stardust-500: #a1856e;
+$stardust-600: #947562;
+$stardust-700: #7b6053;
+$stardust-800: #654f47;
+$stardust-900: #53423b;
+$stardust-950: #2c211e;
+
+$primary-stardust: $stardust-400;
+$secondary-stardust: $stardust-800;
+$accent-stardust: $stardust-200;
+$highlight-stardust: $stardust-50;
+
+// Gravity
+$gravity-50: #faf4ff;
+$gravity-100: #f3e6ff;
+$gravity-200: #e9d2ff;
+$gravity-300: #d8aeff;
+$gravity-400: #c07bff;
+$gravity-500: #a849ff;
+$gravity-600: #9425f8;
+$gravity-700: #7f15db;
+$gravity-800: #6c17b2;
+$gravity-900: #59148f;
+$gravity-950: #2e0052;
+
+$primary-gravity: $gravity-400;
+$secondary-gravity: $gravity-800;
+$accent-gravity: $gravity-200;
+$highlight-gravity: $gravity-50;
+
+// Nebula
+$nebula-50: #fcf6fd;
+$nebula-100: #f9ecfb;
+$nebula-200: #f3d7f7;
+$nebula-300: #ebb7f0;
+$nebula-400: #e08de5;
+$nebula-500: #ce60d5;
+$nebula-600: #b341b8;
+$nebula-700: #a738a9;
+$nebula-800: #7d2b7d;
+$nebula-900: #672866;
+$nebula-950: #430f42;
+
+$primary-nebula: $nebula-400;
+$secondary-nebula: $nebula-800;
+$accent-nebula: $nebula-200;
+$highlight-nebula: $nebula-50;
+
+// Singularity
+$singularity-50: #f4f5fb;
+$singularity-100: #e9ebf5;
+$singularity-200: #ced4e9;
+$singularity-300: #a2aed7;
+$singularity-400: #7083c0;
+$singularity-500: #4e64a9;
+$singularity-600: #3c4e8d;
+$singularity-700: #313f73;
+$singularity-800: #2c3760;
+$singularity-900: #293051;
+$singularity-950: #0d0f1a;
+
+$primary-singularity: $singularity-400;
+$secondary-singularity: $singularity-800;
+$accent-singularity: $singularity-200;
+$highlight-singularity: $singularity-50;
 
 // Primary & Secondary
-$primary: $blaze-orange;
-$secondary: $scarlet;
+$primary: $daintree-400;
+$secondary: $daintree-900;

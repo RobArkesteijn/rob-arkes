@@ -1,0 +1,129 @@
+{
+  "variables": [
+    {
+      "name": "$ghost-white",
+      "value": "#F7F7FF",
+      "compiledValue": "#F7F7FF"
+    },
+    {
+      "name": "$dim-gray",
+      "value": "#60656F",
+      "compiledValue": "#60656F"
+    },
+    {
+      "name": "$night",
+      "value": "#131112",
+      "compiledValue": "#131112"
+    },
+    {
+      "name": "$blaze-orange",
+      "value": "#ff6600",
+      "compiledValue": "#ff6600"
+    },
+    {
+      "name": "$international-orange",
+      "value": "#ff5500",
+      "compiledValue": "#ff5500"
+    },
+    {
+      "name": "$scarlet",
+      "value": "#ff3300",
+      "compiledValue": "#ff3300"
+    },
+    {
+      "name": "$sunshade",
+      "value": "#ffac33",
+      "compiledValue": "#ffac33"
+    },
+    {
+      "name": "$primary-stardust",
+      "value": "#e1c16e",
+      "compiledValue": "#e1c16e"
+    },
+    {
+      "name": "$secondary-stardust",
+      "value": "#c3a0e5",
+      "compiledValue": "#c3a0e5"
+    },
+    {
+      "name": "$accent-stardust",
+      "value": "#d9c2ff",
+      "compiledValue": "#d9c2ff"
+    },
+    {
+      "name": "$highlight-stardust",
+      "value": "#f4e7ff",
+      "compiledValue": "#f4e7ff"
+    },
+    {
+      "name": "$primary-gravity",
+      "value": "#1a1a1d",
+      "compiledValue": "#1a1a1d"
+    },
+    {
+      "name": "$secondary-gravity",
+      "value": "#4c5c68",
+      "compiledValue": "#4c5c68"
+    },
+    {
+      "name": "$accent-gravity",
+      "value": "#3a405a",
+      "compiledValue": "#3a405a"
+    },
+    {
+      "name": "$highlight-gravity",
+      "value": "#d8d8d8",
+      "compiledValue": "#d8d8d8"
+    },
+    {
+      "name": "$primary-nebula",
+      "value": "#d72638",
+      "compiledValue": "#d72638"
+    },
+    {
+      "name": "$secondary-nebula",
+      "value": "#3d348B",
+      "compiledValue": "#3d348B"
+    },
+    {
+      "name": "$accent-nebula",
+      "value": "#ff1f8f",
+      "compiledValue": "#ff1f8f"
+    },
+    {
+      "name": "$highlight-nebula",
+      "value": "#8B5cf6",
+      "compiledValue": "#8B5cf6"
+    },
+    {
+      "name": "$primary-singularity",
+      "value": "black",
+      "compiledValue": "black"
+    },
+    {
+      "name": "$secondary-singularity",
+      "value": "#290d41",
+      "compiledValue": "#290d41"
+    },
+    {
+      "name": "$accent-singularity",
+      "value": "#1b1a55",
+      "compiledValue": "#1b1a55"
+    },
+    {
+      "name": "$highlight-singularity",
+      "value": "#ffffff",
+      "compiledValue": "#ffffff"
+    },
+    {
+      "name": "$primary",
+      "value": "$blaze-orange",
+      "compiledValue": "#ff6600"
+    },
+    {
+      "name": "$secondary",
+      "value": "$scarlet",
+      "compiledValue": "#ff3300"
+    }
+  ]
+}

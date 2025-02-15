@@ -20,12 +20,48 @@ button,
 
   @include hover-style {
     background-color: $night;
-    box-shadow: 0 0 10px 0 $scarlet;
+    box-shadow: 0 0 10px 0 $secondary;
     outline: 0;
   }
 
   &--active {
     background-color: $night;
-    box-shadow: 0 0 10px 0 $scarlet;
+    box-shadow: 0 0 10px 0 $secondary;
+  }
+
+  &--stardust {
+    color: $highlight-stardust;
+    border-color: $primary-stardust;
+
+    @include hover-style {
+      box-shadow: 0 0 10px 0 $secondary-stardust;
+    }
+  }
+
+  &--gravity {
+    color: $highlight-gravity;
+    border-color: $secondary-gravity;
+
+    @include hover-style {
+      box-shadow: 0 0 10px 0 $primary-gravity;
+    }
+  }
+
+  &--nebula {
+    color: $highlight-nebula;
+    border-color: $secondary-nebula;
+
+    @include hover-style {
+      box-shadow: 0 0 10px 0 $primary-nebula;
+    }
+  }
+
+  &--singularity {
+    color: $highlight-singularity;
+    border-color: $primary-singularity;
+
+    @include hover-style {
+      box-shadow: 0 0 10px 0 $secondary-singularity;
+    }
   }
 }

@@ -27,9 +27,11 @@ const animationActive = useAnimationActive()
   cursor: pointer;
   display: flex;
   border-radius: 0;
+  border-color: $daintree-100;
 
   &__icon {
     font-size: 24px;
+    color: $daintree-100;
   }
 }
 </style>
