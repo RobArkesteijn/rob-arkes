@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import gsap from 'gsap-trial'
+import gsap from 'gsap'
 
 onMounted(() => {
   const lightRays = document.querySelector('.light-rays') as SVGElement

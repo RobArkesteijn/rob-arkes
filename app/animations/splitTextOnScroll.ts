@@ -1,5 +1,5 @@
-import gsap from 'gsap-trial'
-import SplitText from 'gsap-trial/SplitText'
+import gsap from 'gsap'
+import SplitText from 'gsap/SplitText'
 
 function splitTextOnScroll(element: Element): void {
   const q = gsap.utils.selector(element)

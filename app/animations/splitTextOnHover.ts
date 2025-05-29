@@ -1,5 +1,5 @@
-import gsap from 'gsap-trial'
-import SplitText from 'gsap-trial/SplitText'
+import gsap from 'gsap'
+import SplitText from 'gsap/SplitText'
 
 function splitTextOnHover(element: Element, isEntering: boolean): void {
   const split = new SplitText(element, { type: 'chars' })

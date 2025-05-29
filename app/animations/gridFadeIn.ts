@@ -1,4 +1,4 @@
-import { gsap } from 'gsap-trial'
+import { gsap } from 'gsap'
 
 const gridFadeIn = (element: Element) => {
   const tl = gsap.timeline({

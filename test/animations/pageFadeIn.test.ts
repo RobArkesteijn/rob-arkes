@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { gsap } from 'gsap-trial'
-import { pageFadeIn } from '#imports'
+import { gsap } from 'gsap'
+import pageFadeIn from '@/animations/pageFadeIn'
 
 describe('pageFadeIn', () => {
   it('should call gsap.to with the correct arguments when element is provided', () => {

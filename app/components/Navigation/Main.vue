@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { gsap } from 'gsap-trial'
-import { ScrollTrigger } from 'gsap-trial/ScrollTrigger'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { ComponentPublicInstance } from 'vue'
 import type { RouteLocationAsRelativeGeneric, RouteLocationAsPathGeneric } from '#vue-router'
 

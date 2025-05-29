@@ -1,7 +1,7 @@
-import { gsap } from 'gsap-trial'
-import { SplitText } from 'gsap-trial/SplitText'
-import { ScrollTrigger } from 'gsap-trial/ScrollTrigger'
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother'
+import { gsap } from 'gsap'
+import { SplitText } from 'gsap/SplitText'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 
 export default defineNuxtPlugin(() => {
   gsap.registerPlugin(SplitText, ScrollTrigger, ScrollSmoother)

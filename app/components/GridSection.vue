@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { gsap } from 'gsap-trial'
+import { gsap } from 'gsap'
 import type { ColorSettings } from '#build/imports'
 
 const props = defineProps({

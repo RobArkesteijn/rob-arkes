@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 
 const firstSection = ref<Element | null>(null)
 const secondSection = ref<Element | null>(null)
