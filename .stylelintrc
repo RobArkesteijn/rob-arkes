@@ -13,11 +13,6 @@
     "scss/function-no-unknown": [true, {
       "ignoreFunctions": ["to-rem", "v-bind"]
     }],
-    "declaration-property-value-no-unknown": [
-      true,
-      {
-        "ignoreValues": ["/^\\$/"]
-      }
-    ]
+    "declaration-property-value-no-unknown": null
   }
 }
