@@ -5,11 +5,11 @@ const firstSection = ref<Element | null>(null)
 const secondSection = ref<Element | null>(null)
 const index = ref<HTMLElement | null>(null)
 
-const { data: githubData } = await useFetch('/api/github/user')
+// const { data: githubData } = await useFetch('/api/github/user')
 
 useSeoMeta({
-  title: 'Homepage',
-  description: 'The website of Rob Arkesteijn, a Frontend Developer from Delft - The Netherlands',
+  title: 'Enter the cosmos',
+  description: 'Explore the forces that shape my creative universe. Each cosmic element reflects a different facet of my work and vision.',
 })
 
 onMounted(() => {
@@ -18,10 +18,6 @@ onMounted(() => {
     effects: true,
     normalizeScroll: true,
   })
-
-  if (firstSection.value) {
-    splitTextOnScroll(firstSection.value)
-  }
 
   if (secondSection.value) {
     gridFadeIn(secondSection.value)
@@ -39,13 +35,8 @@ onMounted(() => {
       ref="firstSection"
       class="index__section"
     >
-      <div class="index__container index__container--text content-wrapper">
-        <h1 class="index__title split-text">
-          Enter the cosmos
-        </h1>
-        <p class="index__introduction split-text">
-          Explore the forces that shape my creative universe. Each cosmic element reflects a different facet of my work and vision.
-        </p>
+      <div class="index__container">
+        <ThreeDimensionalText />
       </div>
     </div>
     <div
@@ -62,28 +53,16 @@ onMounted(() => {
             class="index__grid-section index__grid-section--row1"
             color-type="singularity"
           >
-            <GithubProfile
+            <!-- <GithubProfile
               v-if="githubData"
               :data="githubData"
-            />
+            /> -->
           </GridSection>
           <GridSection
             class="index__grid-section index__grid-section--row2"
             color-type="stardust"
           />
         </div>
-      </div>
-    </div>
-    <div
-      class="index__section"
-    >
-      <div class="index__container index__container--text content-wrapper">
-        <h1 class="index__title">
-          Enter the cosmos
-        </h1>
-        <p class="index__introduction">
-          Explore the forces that shape my creative universe. Each cosmic element reflects a different facet of my work and vision.
-        </p>
       </div>
     </div>
   </div>
@@ -166,10 +145,6 @@ $section-height: calc(100vh - $header-height * 2);
     &--text {
       text-align: center;
     }
-  }
-
-  &__introduction {
-    font-size: to-rem(16);
   }
 }
 </style>
