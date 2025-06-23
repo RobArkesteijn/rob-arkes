@@ -8,8 +8,8 @@ const index = ref<HTMLElement | null>(null)
 const { data: githubData } = await useFetch('/api/github/user')
 
 useSeoMeta({
-  title: 'Homepage',
-  description: 'The website of Rob Arkesteijn, a Frontend Developer from Delft - The Netherlands',
+  title: 'Enter the cosmos',
+  description: 'Explore the forces that shape my creative universe. Each cosmic element reflects a different facet of my work and vision.',
 })
 
 onMounted(() => {

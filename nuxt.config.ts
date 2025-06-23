@@ -13,7 +13,15 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-11-29',
+  build: {
+    transpile: [
+      'gsap',
+      'three',
+      '@vercel/speed-insights/nuxt',
+    ],
+  },
+
+  compatibilityDate: '2025-06-23',
 
   css: ['@/assets/scss/app.scss'],
 
@@ -25,15 +33,13 @@ export default defineNuxtConfig({
     },
   },
 
-  future: {
-    compatibilityVersion: 4,
+  experimental: {
+    buildCache: true,
+    typedPages: true,
   },
 
-  googleFonts: {
-    families: {
-      Aboreto: [400],
-    },
-    display: 'swap',
+  future: {
+    compatibilityVersion: 4,
   },
 
   image: {
@@ -53,7 +59,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils/module',
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/google-fonts',
+    '@nuxt/fonts',
     'nuxt-particles',
     '@nuxt/icon',
     '@nuxtjs/seo',
