@@ -1,0 +1,9 @@
+<template>
+  <div
+    id="smooth-content"
+    ref="nebula"
+    class="nebula"
+  >
+    Nebula
+  </div>
+</template>

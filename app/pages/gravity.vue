@@ -1,0 +1,9 @@
+<template>
+  <div
+    id="smooth-content"
+    ref="gravity"
+    class="gravity"
+  >
+    Gravity
+  </div>
+</template>

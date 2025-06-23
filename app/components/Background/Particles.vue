@@ -8,15 +8,19 @@ const animationActive = useAnimationActive()
 const options: ParticlesOptions = {
   particles: {
     number: {
-      value: 600,
+      value: 800,
       density: {
         enable: true,
         width: 3000,
         height: 3000,
       },
     },
+    collisions: {
+      enable: true,
+      mode: 'bounce',
+    },
     color: {
-      value: ['#ffac33', '#ff5500', '#ff6600', '#ff3300'],
+      value: ['#d9c2ff', '#3a405a', '#ff1f8f', '#1b1a55'],
     },
     shape: {
       type: 'circle',
@@ -38,32 +42,84 @@ const options: ParticlesOptions = {
       },
     },
     move: {
-      attract: {
-        enable: false,
-        rotate: {
-          x: 600,
-          y: 1200,
+      enable: true,
+      speed: 2,
+      path: {
+        enable: true,
+        options: {
+          type: 'circle',
+          radius: 300,
         },
       },
-      direction: 'top',
-      enable: true,
-      speed: 8,
-      random: true,
+      angle: {
+        value: 360,
+        offset: 0,
+      },
+      outModes: {
+        default: 'bounce',
+      },
+      random: false,
       straight: false,
-      outModes: 'out',
     },
   },
   interactivity: {
-    detectsOn: 'canvas',
+    detectsOn: 'window',
     events: {
       onHover: {
-        enable: false,
+        enable: true,
+        mode: 'attract',
       },
       onClick: {
-        enable: false,
+        enable: true,
+        mode: 'push',
       },
       resize: {
         enable: true,
+      },
+    },
+    modes: {
+      attract: {
+        distance: 300,
+        duration: 0.5,
+        speed: 1,
+        factor: 5,
+        maxSpeed: 5,
+      },
+      push: {
+        quantity: 4,
+      },
+      explode: {
+        particles: {
+          shape: {
+            type: 'star',
+          },
+          opacity: {
+            value: { min: 0.5, max: 1 },
+            animation: {
+              enable: true,
+              speed: 3,
+              sync: false,
+            },
+          },
+          size: {
+            value: { min: 3, max: 6 },
+            animation: {
+              enable: true,
+              speed: 4,
+              sync: false,
+              startValue: 'min',
+              destroy: 'max',
+            },
+          },
+        },
+        rate: {
+          quantity: 5,
+          delay: 0.1,
+        },
+        life: {
+          duration: 0.4,
+          count: 1,
+        },
       },
     },
   },

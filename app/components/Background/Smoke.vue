@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import * as THREE from 'three'
+import colorVariables from '@/assets/exports/colors.json'
+import { navigationItems } from '@/data/Navigation'
 
 const animationActive = useAnimationActive()
+const route = useRoute()
 
 let camera: THREE.PerspectiveCamera,
   scene: THREE.Scene,
@@ -11,9 +14,12 @@ let camera: THREE.PerspectiveCamera,
   smokeGeo: THREE.PlaneGeometry
 
 const smokeParticles: THREE.Mesh[] = []
+let smokeMaterial: THREE.MeshLambertMaterial
+const defaultTexturePath = '/cosmic-cloud.png'
+const cameraZPosition = 1050
 const fadeDuration = 2
-const backgroundColor = '#131112' // night
-const smokeColor = '#60656F' // dim-gray
+const backgroundColor = colorVariables.variables.find(el => el.name === '$night')?.value
+const smokeColor = colorVariables.variables.find(el => el.name === '$dim-gray')?.value
 
 const smokeDiv = ref<HTMLDivElement | null>(null)
 
@@ -31,7 +37,7 @@ const init = () => {
     1,
     10000,
   )
-  camera.position.z = 1000
+  camera.position.z = 950
 
   scene.background = new THREE.Color(backgroundColor)
 
@@ -44,18 +50,16 @@ const init = () => {
   const loader = new THREE.TextureLoader()
   loader.crossOrigin = ''
 
-  const smokeTexture = loader.load(
-    '/smoke-element.png',
-  )
+  const smokeTexture = loader.load(defaultTexturePath)
 
-  const smokeMaterial = new THREE.MeshLambertMaterial({
+  smokeMaterial = new THREE.MeshLambertMaterial({
     map: smokeTexture,
     color: new THREE.Color(smokeColor),
     transparent: true,
     opacity: 0,
   })
 
-  smokeGeo = new THREE.PlaneGeometry(300, 300)
+  smokeGeo = new THREE.PlaneGeometry(400, 400)
 
   for (let p = 0; p < 150; p++) {
     const particle = new THREE.Mesh(smokeGeo, smokeMaterial.clone())
@@ -72,6 +76,17 @@ const init = () => {
   if (smokeDiv.value) {
     smokeDiv.value.appendChild(renderer.domElement)
   }
+}
+
+const updateSmokeTexture = (texturePath: string) => {
+  const loader = new THREE.TextureLoader()
+  const newTexture = loader.load(texturePath)
+
+  smokeParticles.forEach((particle) => {
+    const material = particle.material as THREE.MeshLambertMaterial
+    material.map = newTexture
+    material.needsUpdate = true
+  })
 }
 
 const animate = () => {
@@ -91,7 +106,7 @@ const evolveSmoke = () => {
   while (sp--) {
     const particle = smokeParticles[sp]
     if (particle) {
-      particle.rotation.z += delta * 0.2
+      particle.rotation.z += delta * 0.05
 
       if ((particle.material as THREE.Material).opacity < 1) {
         (particle.material as THREE.Material).opacity = Math.min(1, elapsedTime / fadeDuration)
@@ -119,6 +134,21 @@ onMounted(() => {
   animate()
 
   window.addEventListener('resize', handleResize)
+
+  watch(
+    () => route.path,
+    (newPath) => {
+      const matchingNavItem = navigationItems.find(item => item.link === newPath)
+      const texturePath = matchingNavItem ? matchingNavItem.image : defaultTexturePath
+      updateSmokeTexture(texturePath)
+
+      const zPosition = matchingNavItem?.z_position ?? cameraZPosition
+      if (camera) {
+        camera.position.z = zPosition
+      }
+    },
+    { immediate: true },
+  )
 })
 
 onUnmounted(() => {
@@ -137,5 +167,7 @@ onUnmounted(() => {
 .smoke-background {
   height: 100%;
   width: 100%;
+  z-index: -1;
+  position: relative;
 }
 </style>

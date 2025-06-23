@@ -1,1 +1,9 @@
 @use '../helpers' as *;
+
+h1 {
+  font-size: to-rem(36);
+
+  @include respond-min($tablet) {
+    font-size: to-rem(48);
+  }
+}

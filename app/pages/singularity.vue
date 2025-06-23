@@ -1,0 +1,9 @@
+<template>
+  <div
+    id="smooth-content"
+    ref="singularity"
+    class="singularity"
+  >
+    Singularity
+  </div>
+</template>

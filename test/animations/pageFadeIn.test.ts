@@ -1,8 +1,19 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { gsap } from 'gsap'
-import { pageFadeIn } from '#imports'
+import pageFadeIn from '@/animations/pageFadeIn'
+
+vi.mock('gsap', () => ({
+  gsap: {
+    to: vi.fn(),
+    timeline: vi.fn(() => ({ to: vi.fn(), from: vi.fn() })),
+  },
+}))
 
 describe('pageFadeIn', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
   it('should call gsap.to with the correct arguments when element is provided', () => {
     const mockElement = document.createElement('div')
 

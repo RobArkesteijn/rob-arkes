@@ -1,0 +1,9 @@
+<template>
+  <div
+    id="smooth-content"
+    ref="stardust"
+    class="stardust"
+  >
+    Stardust
+  </div>
+</template>

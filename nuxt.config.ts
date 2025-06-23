@@ -13,7 +13,15 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-11-29',
+  build: {
+    transpile: [
+      'gsap',
+      'three',
+      '@vercel/speed-insights/nuxt',
+    ],
+  },
+
+  compatibilityDate: '2025-06-23',
 
   css: ['@/assets/scss/app.scss'],
 
@@ -25,19 +33,25 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    buildCache: true,
+    typedPages: true,
+  },
+
   future: {
     compatibilityVersion: 4,
   },
 
-  googleFonts: {
-    families: {
-      Aboreto: [400],
-    },
-    display: 'swap',
+  image: {
+    quality: 80,
   },
 
   imports: {
     dirs: ['animations', 'data', 'types'],
+  },
+
+  linkChecker: {
+    enabled: false,
   },
 
   modules: [
@@ -45,10 +59,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils/module',
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/google-fonts',
+    '@nuxt/fonts',
     'nuxt-particles',
     '@nuxt/icon',
     '@nuxtjs/seo',
+    '@nuxtjs/device',
   ],
 
   ogImage: {
@@ -57,6 +72,15 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { isr: true },
+  },
+
+  nitro: {
+    storage: {
+      recipes: {
+        driver: 'fs',
+        base: 'github-user',
+      },
+    },
   },
 
   site: {

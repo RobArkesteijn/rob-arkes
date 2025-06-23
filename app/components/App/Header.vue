@@ -3,22 +3,25 @@ import { navigationItems } from '@/data/Navigation'
 
 const logoRef = ref<ComponentPublicInstance | null>(null)
 
-const scrollRotate = () => {
-  if (logoRef.value) {
-    logoRef.value.$el.style.transform = `rotate(${window.scrollY / 4}deg)`
-  }
-}
+// const scrollRotate = () => {
+//   if (logoRef.value) {
+//     logoRef.value.$el.style.transform = `rotate(${window.scrollY / 4}deg)`
+//   }
+// }
 
-onMounted(() => {
-  window.onscroll = function () {
-    scrollRotate()
-  }
-})
+// onMounted(() => {
+//   window.onscroll = () => {
+//     scrollRotate()
+//   }
+// })
 </script>
 
 <template>
   <div class="app-header">
-    <NuxtLink to="/">
+    <NuxtLink
+      to="/"
+      class="app-header__logo-link"
+    >
       <NuxtImg
         ref="logoRef"
         src="/logo.png"
@@ -28,9 +31,10 @@ onMounted(() => {
         class="app-header__logo"
       />
     </NuxtLink>
-    <NavigationDesktop :items="navigationItems" />
-    <NavigationMobile :items="navigationItems" />
-    <div class="app-header__logo-size-copy" />
+    <NavigationMain :items="navigationItems" />
+    <!-- <NavigationDesktop :items="navigationItems" />
+    <NavigationMobile :items="navigationItems" /> -->
+    <!-- <div class="app-header__logo-size-copy" /> -->
   </div>
 </template>
 
@@ -45,6 +49,10 @@ onMounted(() => {
   width: 100vw;
   align-items: center;
   padding-inline: 20px;
+
+  &__logo-link {
+    z-index: map.get($z-index, 'positive');
+  }
 
   &__logo {
     transform-origin: center;

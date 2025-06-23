@@ -17,30 +17,41 @@ onMounted(() => {
         ref="container"
         class="layout"
       >
+        <AppHeader />
         <div class="background">
           <BackgroundSmoke />
           <BackgroundParticles />
+          <BackgroundRayGradient />
         </div>
-        <AppHeader />
-        <main>
+        <main id="smooth-wrapper">
           <slot />
         </main>
-        <PauseAnimationButton class="pause-animation-button" />
+        <ScrollDownIndicator />
+        <PauseAnimationButton />
       </div>
     </Body>
   </Html>
 </template>
 
-<style scoped lang="scss">
-main >:first-child {
-  padding-block: $header-height;
+<style lang="scss">
+main {
+  >:first-child {
+    padding-block: $header-height;
+  }
 }
 
 .background {
   position: fixed;
-  z-index: map.get($z-index, 'negative');
+  top: 0;
   height: 100%;
   width: 100%;
+  z-index: -1;
+}
+
+.scroll-down-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 50%;
 }
 
 .pause-animation-button {
